@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "clusters_tf_state_s3_bucket" {
-  bucket = "${var.clusters_name_prefix}-terraform-state"
+  bucket = "${var.clusters_name_prefix}-terraform-state-specificname"
   acl    = "private"
   versioning {
     enabled = false
@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "clusters_tf_state_s3_bucket" {
 }
 
 resource "aws_s3_bucket" "clusters_vpc_tf_state_s3_bucket" {
-  bucket = "${var.clusters_name_prefix}-vpc-terraform-state"
+  bucket = "${var.clusters_name_prefix}-vpc-terraform-state-specificname"
   acl    = "private"
   versioning {
     enabled = false
